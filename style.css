@@ -1,0 +1,341 @@
+:root {
+    --red : #780000;
+    --light-red : #c1121f;
+    --background : #f1faee;
+    --blue: #003049;
+    --light-blue: #669bbc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Montserrat', monospace;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+a {
+    color: var(--blue);
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px;
+    align-items: center;
+}
+
+nav .left h1 {
+    color: var(--background);
+    font-size: 30px;
+    background-color: var(--blue);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+nav .right a {
+    padding: 5px;
+}
+
+nav .right a:last-child {
+    background-color: var(--blue);
+    color: var(--background);
+    border-radius: 5px;
+}
+
+/* Section 1 */
+.tenka {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin: 50px 0;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 150px;
+}
+
+.tenka .text {
+    flex: 5;
+}
+
+.tenka .text h2 {
+    font-size: 45px;
+    color: var(--blue);
+    margin-bottom: 5px;
+}
+
+
+.tenka .text p {
+    color: var(--blue);
+}
+
+.tenka .text .links {
+    margin-top: 25px;
+}
+
+.tenka .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 0.1s;
+}
+
+.tenka .text .links a:hover {
+    color: var(--background);
+    background-color: var(--red);
+}
+
+.tenka .image {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.tenka .image img {
+    border-radius: 50%;
+    width: 300px;
+    height: auto;
+}
+
+/* skills */
+.skills {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 35px;
+    color: var(--blue);
+}
+
+.skills .text {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--blue);
+}
+
+.skills .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px 20px;
+    border: 1.5px solid var(--red);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.skills .cells .cell img {
+    width: auto;
+    height: 35px;
+}
+
+.skills .cells .cell span {
+    font-size: 18px;
+}
+
+/* about */
+.about {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.about h2 {
+    font-size: 35px;
+    color: var(--blue);
+    margin-bottom: 30px;
+}
+
+.about .grub {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: var(--blue);
+}
+
+.about .grub .detail {
+    text-align: center;
+    flex: 2;
+}
+
+.about .grub .detail img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.about .grub .detail p {
+    font-weight: 700;
+}
+
+.about .grub .detail p:last-child {
+    font-weight: normal;
+}
+
+.about .grub .text {
+    flex: 8;
+    color: var(--red);
+}
+
+/* contact */
+.contact {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact h2 {
+    font-size: 35px;
+    color: var(--blue);
+}
+
+.contact .grub {
+    display: flex;
+    gap: 50px;
+    color: var(--red);
+}
+
+.contact .grub .text {
+    flex: 3;
+    margin-top: 25px;
+}
+
+.contact .grub form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .grub form input, .contact .grub form textarea {
+    font-family: 'Montserrat', monospace;
+    border: 2px solid var(--red);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact .grub form button {
+    font-size: 16px;
+    font-family: 'Montserrat', monospace;
+    background-color: var(--red);
+    color: var(--background);
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+contact .grub form button:hover {
+    filter: brightness(.9);
+}
+
+/* Media */
+@media (max-width: 850px) {
+    /* tenka */
+    .tenka .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+    /* tenka */
+    .tenka {
+        flex-direction: column-reverse;
+    }
+
+    .tenka .image img {
+        width: 230px;
+    }
+
+    /* About */
+    .about {
+        text-align: center;
+    }
+    
+    .about .grub {
+        flex-direction: column;
+    }
+
+    /* contact */
+    .contact .grub {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    /* navbar */
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a:last-child {
+        color: var(--blue);
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+
+    nav .left h1 {
+        font-size: 24px;
+    }
+
+    /* Tenka */
+    .tenka {
+        padding: 0 20px;
+    }
+
+    .tenka .text h2 {
+        font-size: 30px;
+    }
+
+    /* skills */
+    .skills {
+        padding: 0 20px;
+    }
+
+    .skills .cells .cell span {
+        font-size: 16px;
+    }
+
+    /* about */
+    .about {
+        padding: 0 20px;
+    }
+
+    /* contact */
+    .contact {
+        padding: 0 20px;
+    }
+}
